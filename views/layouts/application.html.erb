@@ -1,11 +1,15 @@
+<%
+  def link_to(name, url)
+    return "<a href='#{url}'>#{name}</a>"
+  end
+%>
 <html>
   <body>
-    <h1>You're using a layout</h1>
+    <h1>The Pwnage</h1>
     <p>
-      <h3> I'm a header</h3>
-      <p>Put things in the header</p>
-      <a href='me.html'>Me</a>
-
+      <h3>Things that pwn</h3>
+      <p>Stuff and stuffage</p>
+      <%= link_to('Asta La Vista', 'http://www.astalavista.net') %>
     </p>
     <hr />
     <div>
@@ -15,6 +19,7 @@
     <div>
       <h3> I'm a footer</h3>
       <p>Put things in the footer</p>
+      <%= link_to('Ultima Online', 'http://www.ultimaforever.com') %>
     </div>
   </body>
 </html>
