@@ -12,6 +12,15 @@
       <%= link_to('Asta La Vista', 'http://www.astalavista.net') %>
     </p>
     <hr />
+    <% if @request.query['first_name'] %>
+      Hi <%= @request.query['first_name'] %>
+    <% else %>
+      Enter your names
+    <% end %>
+    <form method='post' action="<%= @request.path %>">
+        First name: <input type="text" name="first_name" placeholder='first name'/><br />
+        <input type="submit" value="Submit" />
+    </form>
     <div>
       <%= yield %>
     </div>
